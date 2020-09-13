@@ -1,6 +1,6 @@
 {
     "name": "logdo/logdo-php",
-    "description": "A package to log all of your logs to the Logdo application",
+    "description": "Logdo is a self hosted application logging server that brings back the fun in reading logs. This is the PHP SDK.",
     "type": "library",
     "license": "MIT",
     "authors": [
