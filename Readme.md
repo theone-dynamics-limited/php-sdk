@@ -1,4 +1,4 @@
-![Logdo](.github/logo.png?raw=true)
+![Logdo](.github/logo.png?raw=true =80x80)
 
 # Logdo, php SDK
 
@@ -17,20 +17,21 @@ require('vendor/autoload.php');
 
 use Logdo\Logdo;
 
-$appId = "2f725873e5415ce874dceddfe50a70f5";
-$apiToken = "lpdXmbkBwU3EJsELdWvUP8Lg16Vqs0aYE2B10vZf";
+$appId = "---YOUR APP ID HERE---";
+$apiToken = "---YOUR API KEY HERE---";
 
 $logdo = Logdo::createInstance($apiToken, $appId)
-    ->log('Some second log')
+    ->log('Some log')
     ->to('http://logdo.test')
     ->as(Logdo::INFO);
 
 if (!$logdo->wasSuccessful()) {
-    // Do something
+    // Do some failure handling
     die($logdo->getErrorMessage());
 }
 
-echo "\nSuccessfuly logged!\n";
+// Do some success handling
+echo "Successfuly logged!";
 ```
 
 ## Help and docs
@@ -42,8 +43,14 @@ We use GitHub issues only to discuss bugs and new features. For support please r
 
 ## Installing Logdo php SDK
 
-The recommended way to install Guzzle is through
-[Composer](https://getcomposer.org/).
+The recommended way to install the SDK through
+[Composer](https://getcomposer.org/). Note that the SDK requires 
+```php
+        "php":">=7.2",
+        "guzzlehttp/guzzle": "^7.0"
+```
+
+Seriously, because why not? php 5.6 is so 2016. I was't even writing php back then!
 
 ```bash
 composer require logdo/logdo-php

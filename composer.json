@@ -9,12 +9,12 @@
             "email": "ambrosemwaka@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {"Logdo\\": "src/"}
     },
     "require": {
-        "php":">7.0",
+        "php":">=7.2",
         "guzzlehttp/guzzle": "^7.0"
     }
 }
