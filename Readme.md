@@ -46,8 +46,8 @@ We use GitHub issues only to discuss bugs and new features. For support please r
 The recommended way to install the SDK through
 [Composer](https://getcomposer.org/). Note that the SDK requires 
 ```php
-        "php":">=7.2",
-        "guzzlehttp/guzzle": "^7.0"
+"php":">=7.2",
+"guzzlehttp/guzzle": "^7.0"
 ```
 
 Seriously, because why not? php 5.6 is so 2016. I was't even writing php back then!
