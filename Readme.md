@@ -1,4 +1,4 @@
-![Logdo](.github/logo.png?raw=true =80x80)
+![Logdo](.github/logo.png?raw=true)
 
 # Logdo, php SDK
 
