@@ -1,6 +1,6 @@
 
 ![Logdo](.github/logo.png?raw=true)
-# Logdo, PHP SDK ![Tests](https://github.com/logdo/php-sdk/actions/workflows/ci/badge.svg)
+# Logdo, PHP SDK ![Tests](https://github.com/logdo/php-sdk/actions/workflows/ci.yml/badge.svg)
 LogDo: You production logs, exactly like you are used to them on your local 🥳
 
 - Simple interface for viewing logs
