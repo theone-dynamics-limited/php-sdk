@@ -1,4 +1,4 @@
-name: CI
+name: php_versions_compatibilty_and_tests
 
 on:
   push:
