@@ -24,6 +24,12 @@ $logdo = Logdo::instance()
     ->go();
 ```
 
+## Tests
+
+To run tests in this sdk, run
+```bash
+composer run tests
+```
 ## Help and docs
 
 We use GitHub issues only to discuss bugs and new features. You can also RTFML [here | documentation.](http://logdo.theonehq.com/docs)
