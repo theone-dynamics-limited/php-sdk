@@ -20,4 +20,11 @@ class LogdoTest extends TestCase {
             Logdo::instance()->logger()
         );
     }
+
+    public function test_the_logdo_class_has_required_api_methods()
+    {
+        $this->assertTrue(method_exists(Logdo::class, "instance"));
+        $this->assertTrue(method_exists(Logdo::class, "logger"));
+        $this->assertTrue(method_exists(Logdo::class, "go"));
+    }
 }
