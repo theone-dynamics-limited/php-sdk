@@ -1,8 +1,7 @@
 ![Logdo](.github/logo.png?raw=true)
 
-# Logdo, php SDK
-
-Logdo is a self hosted application logging server that brings back the fun in reading logs.
+# Logdo, PHP SDK
+LogDo: You production logs, exactly like you are used to them on your local 🥳
 
 - Simple interface for viewing logs
 - App based logging setup
@@ -12,46 +11,27 @@ Logdo is a self hosted application logging server that brings back the fun in re
 ... and many more ....
 
 ```php
-<?php
-require('vendor/autoload.php');
-
-use Logdo\Logdo;
-
-$appId = "---YOUR APP ID HERE---";
-$apiToken = "---YOUR API KEY HERE---";
-
-$logdo = Logdo::createInstance($apiToken, $appId)
-    ->log('Some log')
-    ->to('http://logdo.test')
-    ->as(Logdo::INFO);
-
-if (!$logdo->wasSuccessful()) {
-    // Do some failure handling
-    die($logdo->getErrorMessage());
-}
-
-// Do some success handling
-echo "Successfuly logged!";
+require_once __DIR__ . '/../vendor/autoload.php';
+use LogdoPhp\Logdo;
+$logdo = Logdo::instance()
+    ->logger()
+    ->for("app_id")
+    ->log("hello world")
+    // ->at("hello world")
+    ->as("local")
+    // ->with("stack trace")
+    ->level("info")
+    ->go();
 ```
 
 ## Help and docs
 
-We use GitHub issues only to discuss bugs and new features. For support please refer to:
-
-- [Documentation](http://logdo.dev/docs)
+We use GitHub issues only to discuss bugs and new features. You can also RTFML [here | documentation.](http://logdo.theonehq.com/docs)
 
 
 ## Installing Logdo php SDK
 
-The recommended way to install the SDK through
-[Composer](https://getcomposer.org/). Note that the SDK requires 
-```php
-"php":">=7.2",
-"guzzlehttp/guzzle": "^7.0"
-```
-
-Seriously, because why not? php 5.6 is so 2016. I was't even writing php back then!
-
+The recommended way to install the SDK through [Composer](https://getcomposer.org/).
 ```bash
 composer require logdo/logdo-php
 ```
@@ -60,3 +40,6 @@ composer require logdo/logdo-php
 
 Contributions are welcome in any form.
 
+## Bug and Security Report
+
+Report and bugs and security issue to `theguys@theoneapp.rocks`

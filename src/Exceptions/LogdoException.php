@@ -1,5 +1,5 @@
 <?php
-namespace Logdo\Exceptions;
+namespace LogdoPhp\Exceptions;
 
 use Exception;
 

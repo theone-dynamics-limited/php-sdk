@@ -1,5 +1,5 @@
 <?php
-namespace Logdo\Helpers;
+namespace LogdoPhp\Helpers;
 
 class StringHelper
 {

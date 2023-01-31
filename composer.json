@@ -1,21 +1,27 @@
 {
     "name": "logdo/logdo-php",
-    "description": "Logdo is a self hosted application logging server that brings back the fun in reading logs. This is the PHP SDK.",
+    "description": "A php sdk for logdo. A php and laravel logging app",
     "type": "library",
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "LogdoPhp\\": "src/"
+        }
+    },
     "authors": [
         {
-            "name": "mwakaambrose",
+            "name": "Mwaka Ambrose",
             "email": "ambrosemwaka@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "autoload": {
-        "psr-4": {"Logdo\\": "src/"}
-    },
     "require": {
-        "php":">=7.2",
-        "guzzlehttp/guzzle": "^7.0"
+        "appwrite/appwrite": "^7.2",
+        "nesbot/carbon": "^2.66"
     },
-    "require-dev": {}
+    "scripts": {
+        "try": ["php src/test.php"]
+    },
+    "require-dev": {
+        "pandeydip/dump-die": "^1.0"
+    }
 }
