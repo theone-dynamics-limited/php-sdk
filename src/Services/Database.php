@@ -54,7 +54,7 @@ class Database implements Goable{
         return $this;
     }
 
-    public function as($environment = Database::INFO)
+    public function as(String $environment = Database::INFO)
     {
         $this->environment = $environment;
         return $this;
