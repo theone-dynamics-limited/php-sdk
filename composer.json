@@ -19,9 +19,11 @@
         "nesbot/carbon": "^2.66"
     },
     "scripts": {
-        "try": ["php src/test.php"]
+        "try": ["php src/test.php"],
+        "tests": ["./vendor/bin/phpunit tests"]
     },
     "require-dev": {
-        "pandeydip/dump-die": "^1.0"
+        "pandeydip/dump-die": "^1.0",
+        "phpunit/phpunit": "^9.5"
     }
 }
